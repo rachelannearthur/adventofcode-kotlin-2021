@@ -1,3 +1,10 @@
+package `02`
+
+import readInput
+import readTestInput
+
+const val DAY = "02"
+
 fun main() {
     fun part1(input: List<List<String>>): Int {
         var hor = 0
@@ -43,11 +50,11 @@ fun main() {
         return hor * vert
     }
 
-    val testInput = readInput("Day02_test").map{ it.split(" ") } // [[forward, 5]]
+    val testInput = readTestInput(DAY).map{ it.split(" ") } // [[forward, 5]]
     check(part1(testInput) == 150)
     check(part2(testInput) == 900)
 
-    val input = readInput("Day02_input").map{ it.split(" ") }
+    val input = readInput(DAY).map{ it.split(" ") }
 
     println(part1(input))
     println(part2(input))

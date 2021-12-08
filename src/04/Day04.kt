@@ -1,3 +1,10 @@
+package `04`
+
+import readInput
+import readTestInput
+
+const val DAY = "04"
+
 fun main() {
     fun part1(system: BingoSystem): Int {
         val boards = system.boards.toMutableList()
@@ -30,7 +37,7 @@ fun main() {
         return 0
     }
 
-    val testInput = readInput("Day04_test")
+    val testInput = readTestInput(DAY)
     val testMoves = testInput[0].split(",").map{it.toInt()}
     val testPart1 = part1(BingoSystem(testMoves, getBoardsFromInput(testInput.subList(1, testInput.size))))
     println(testPart1)
@@ -39,7 +46,7 @@ fun main() {
     println(testPart2)
     check(testPart2 == 1924)
 
-    val input = readInput("Day04_input")
+    val input = readInput(DAY)
 
     val moves = input[0].split(",").map{it.toInt()}
     val part1 = part1(BingoSystem(moves, getBoardsFromInput(input.subList(1, input.size))))

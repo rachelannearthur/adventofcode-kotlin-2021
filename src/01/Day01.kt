@@ -1,3 +1,10 @@
+package `01`
+
+import readInput
+import readTestInput
+
+const val DAY = "01"
+
 fun main() {
     fun part1(input: List<Int>): Int {
 
@@ -24,11 +31,11 @@ fun main() {
         }
     }
 
-    val testInput = readInput("Day01_test").map { it.toInt() }
+    val testInput = readTestInput(DAY).map { it.toInt() }
     check(part1(testInput) == 7)
     check(part2(testInput) == 5)
 
-    val input = readInput("Day01_input").map { it.toInt() }
+    val input = readInput(DAY).map { it.toInt() }
 
     println(part1(input))
     println(part2(input))

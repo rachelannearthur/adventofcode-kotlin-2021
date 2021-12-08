@@ -1,3 +1,10 @@
+package `03`
+
+import readInput
+import readTestInput
+
+const val DAY = "03"
+
 fun main() {
     fun part1(input: List<String>): Int {
         val columns = input[0].indices
@@ -56,13 +63,13 @@ fun main() {
         return oxyResult().toInt(radix = 2) * co2Result().toInt(radix = 2)
     }
 
-    val testInput = readInput("Day03_test")
+    val testInput = readTestInput(DAY)
     println(part1(testInput))
     check(part1(testInput) == 198)
     println(part2(testInput))
     check(part2(testInput) == 230)
 
-    val input = readInput("Day03_input")
+    val input = readInput(DAY)
 
     println(part1(input))
     println(part2(input))
