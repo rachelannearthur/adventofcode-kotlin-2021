@@ -2,6 +2,7 @@ package `04`
 
 import readInput
 import readTestInput
+import transpose
 
 const val DAY = "04"
 
@@ -56,20 +57,8 @@ fun main() {
 }
 
 data class Board(val rows: List<List<Square>>) {
-    private val columns: List<List<Square>>
+    private val columns: List<List<Square>> = rows.transpose()
     var unmarkedSum: Int = 0
-
-    init {
-        val cols = mutableListOf<MutableList<Square>>()
-        rows.forEach { row ->
-            row.forEachIndexed { i, value ->
-                if (cols.size <= i) cols.add(i, mutableListOf(value))
-                else cols[i].add(value)
-                unmarkedSum += value.number
-            }
-        }
-        columns = cols
-    }
 
     fun hasWinner() = checkBoard()
 
