@@ -1,8 +1,7 @@
-package `06`
+package day06
 
 import readInput
 import readTestInput
-import java.lang.Math.abs
 import java.util.*
 
 const val DAY = "06"
@@ -40,14 +39,14 @@ fun main() {
         return fishList
     }
 
-    val testInput1 = readTestInput(DAY)[0].split(",").map { Fish(isNew = false, initialDays = it.toInt())}
+    val testInput1 = readTestInput(DAY)[0].split(",").map { Fish(isNew = false, initialDays = it.toInt()) }
     println(part1(testInput1))
 
     val testInputs = readTestInput(DAY)[0].split(",").groupingBy { it.toInt() }.eachCount()
 
     println(part2(getFishList(testInputs)))
 
-    val input = readInput(DAY)[0].split(",").map { Fish(isNew = false, initialDays = it.toInt())}
+    val input = readInput(DAY)[0].split(",").map { Fish(isNew = false, initialDays = it.toInt()) }
     val inputPt2 = readInput(DAY)[0].split(",").groupingBy { it.toInt() }.eachCount()
     println(part1(input))
     println(part2(getFishList(inputPt2)))

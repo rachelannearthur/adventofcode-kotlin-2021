@@ -1,8 +1,7 @@
-package `07`
+package day07
 
 import readInput
 import readTestInput
-import java.lang.Math.abs
 
 const val DAY = "07"
 
