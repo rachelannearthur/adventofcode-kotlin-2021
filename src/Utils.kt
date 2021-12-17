@@ -5,9 +5,9 @@ import java.security.MessageDigest
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(day: String) = File("src/$day", "Day${day}_input.txt").readLines()
+fun readInput(day: String) = File("src/day$day", "Day${day}_input.txt").readLines()
 
-fun readTestInput(day:String) = File("src/$day", "Day${day}_test.txt").readLines()
+fun readTestInput(day:String) = File("src/day$day", "Day${day}_test.txt").readLines()
 
 /**
  * Converts string to md5 hash.
